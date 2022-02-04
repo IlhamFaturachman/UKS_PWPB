@@ -1,6 +1,6 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers
+// ignore: prefer_const_literals_to_create_immutables
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class FormIsi extends StatefulWidget {
@@ -13,25 +13,29 @@ class FormIsi extends StatefulWidget {
 class _FormIsiState extends State<FormIsi> {
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
       body: SingleChildScrollView(
-        child: Container(),
+        child: Column(
+          children: [
+            Container(
+              child: Row(
+                children: [
+                  Container(
+                    height: size.height * 0.5,
+                    width: size.width * 0.65,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage("assets/images/Form Isi.png"),
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            )
+          ],
+        ),
       ),
-      // ignore: prefer_const_literals_to_create_immutables
-      bottomNavigationBar: BottomNavigationBar(items: [
-        BottomNavigationBarItem(
-          icon: Icon(CupertinoIcons.person),
-          label: "Home"
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(CupertinoIcons.person),
-          label: "Home"
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(CupertinoIcons.person),
-          label: "Home"
-        ),
-      ]),
     );
   }
 }

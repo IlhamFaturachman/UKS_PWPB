@@ -1,14 +1,13 @@
 // ignore: file_names
-// ignore_for_file: prefer_const_constructors, sized_box_for_whitespace
+// ignore_for_file: prefer_const_constructors, sized_box_for_whitespace, prefer_const_constructors_in_immutables, avoid_unnecessary_containers, avoid_print
 
-import 'dart:ui';
+
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:form_field_validator/form_field_validator.dart';
 import 'package:uks_pwpb/constants/color.dart';
-import 'package:uks_pwpb/pages/form_isi.dart';
-import 'package:uks_pwpb/pages/home.dart';
+import 'package:uks_pwpb/widget/bottom_nav.dart';
 
 class FormBody extends StatefulWidget {
   FormBody({
@@ -155,7 +154,7 @@ class _FormBodyState extends State<FormBody> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (c) => FormIsi(),
+                        builder: (c) => BottomNav(),
                       ),
                     );
                   },
